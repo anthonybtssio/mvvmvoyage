@@ -22,13 +22,26 @@
             app:argType="string" />
         <action
             android:id="@+id/action_kitDetail_to_createOption"
-            app:destination="@id/createOptionFragment" />
+            app:destination="@id/createOptionFragment">
+        <action
+            android:id="@+id/action_kitDetail_to_sejourCreateOption"
+            app:destination="@id/SejourCreateOptionFragment" />
+        </action>
     </fragment>
 
     <fragment
         android:id="@+id/createOptionFragment"
         android:name="com.example.mvvm_voyages_etu.ui.kitsvoyage.CreateOptionFragment"
         android:label="Nouvelle option">
+        <argument
+            android:name="kitId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sejourCreateOptionFragment"
+        android:name="com.example.mvvm_voyages_etu.ui.kitsvoyage.SejourCreateOptionFragment"
+        android:label="Nouvelle option"
         <argument
             android:name="kitId"
             app:argType="string" />
