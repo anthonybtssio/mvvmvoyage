@@ -36,7 +36,7 @@ public class SejourCreateOptionFragment extends Fragment {
     public void onViewCreated(@NonNull View v, @Nullable Bundle b) {
         super.onViewCreated(v, b);
         vm = new ViewModelProvider(requireActivity()).get(KitsVoyageViewModel.class);
-        kitId = CreateOptionFragmentArgs.fromBundle(getArguments()).getKitId();
+        kitId = SejourCreateOptionFragmentArgs.fromBundle(getArguments()).getKitId();
 
         EditText etNom  = v.findViewById(R.id.etNom);
         EditText etPrix = v.findViewById(R.id.etPrix);

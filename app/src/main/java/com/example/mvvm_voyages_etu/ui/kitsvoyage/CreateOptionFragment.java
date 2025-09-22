@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.mvvm_voyages_etu.R;
+import com.example.mvvm_voyages_etu.data.model.OptionVoyage;
 import com.example.mvvm_voyages_etu.viewmodel.KitsVoyageViewModel;
 
 import dagger.hilt.android.AndroidEntryPoint;
@@ -55,7 +56,8 @@ public class CreateOptionFragment extends Fragment {
                 return;
             }
 
-            boolean ok = vm.addOptionToKitId(kitId, nom, prix);
+            OptionVoyage op = new OptionVoyage(nom, prix);
+            boolean ok = vm.addOptionToKitId(kitId, op);
             if (ok) {
                 Toast.makeText(requireContext(), "Option ajoutée", Toast.LENGTH_SHORT).show();
                 NavHostFragment.findNavController(this).navigateUp(); // retour au détail

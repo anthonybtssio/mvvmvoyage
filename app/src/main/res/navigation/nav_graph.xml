@@ -41,7 +41,7 @@
     <fragment
         android:id="@+id/sejourCreateOptionFragment"
         android:name="com.example.mvvm_voyages_etu.ui.kitsvoyage.SejourCreateOptionFragment"
-        android:label="Nouvelle option"
+        android:label="Nouvelle option">
         <argument
             android:name="kitId"
             app:argType="string" />

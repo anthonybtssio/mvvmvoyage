@@ -64,8 +64,8 @@ public class KitsVoyageViewModel extends ViewModel {
         return ok;
     }
 
-    public boolean addOptionToKitId(String kitId, OptionVoyage optionVoyage) {
-        boolean ok = repo.addOptionToKitId(kitId, optionVoyage);
+    public boolean addOptionToKitId(String kitId, OptionVoyage toto) {
+        boolean ok = repo.addOptionToKitId(kitId, toto);
         if (ok) {
             kits.setValue(repo.getAll());
         }
