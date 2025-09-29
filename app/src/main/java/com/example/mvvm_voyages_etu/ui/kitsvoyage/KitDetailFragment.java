@@ -37,6 +37,7 @@ public class KitDetailFragment extends Fragment {
         vm = new ViewModelProvider(requireActivity()).get(KitsVoyageViewModel.class);
         kitId = KitDetailFragmentArgs.fromBundle(getArguments()).getKitId();
 
+
         tvHeader = v.findViewById(R.id.tvHeader);
         tvTotal  = v.findViewById(R.id.tvTotal);
 
@@ -64,5 +65,6 @@ public class KitDetailFragment extends Fragment {
                     KitDetailFragmentDirections.actionKitDetailToCreateOption(kitId);
             NavHostFragment.findNavController(this).navigate(action);
         });
+
     }
 }

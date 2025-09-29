@@ -13,21 +13,7 @@
             app:destination="@id/kitDetailFragment" />
     </fragment>
 
-    <fragment
-        android:id="@+id/kitDetailFragment"
-        android:name="com.example.mvvm_voyages_etu.ui.kitsvoyage.KitDetailFragment"
-        android:label="Détail">
-        <argument
-            android:name="kitId"
-            app:argType="string" />
-        <action
-            android:id="@+id/action_kitDetail_to_createOption"
-            app:destination="@id/createOptionFragment">
-        <action
-            android:id="@+id/action_kitDetail_to_sejourCreateOption"
-            app:destination="@id/SejourCreateOptionFragment" />
-        </action>
-    </fragment>
+
 
     <fragment
         android:id="@+id/createOptionFragment"
@@ -45,6 +31,15 @@
         <argument
             android:name="kitId"
             app:argType="string" />
+    </fragment>
+    <fragment android:id="@+id/placeholder" />
+    <fragment
+        android:id="@+id/kitDetailFragment"
+        android:name="com.example.mvvm_voyages_etu.ui.kitsvoyage.KitDetailFragment"
+        android:label="KitDetailFragment" >
+        <action
+            android:id="@+id/action_kitDetailFragment_to_createOptionFragment"
+            app:destination="@id/createOptionFragment" />
     </fragment>
 
 </navigation>
